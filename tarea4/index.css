@@ -8,8 +8,9 @@ body{
 }
 header .titulo{
     position: absolute;
-    margin-left:90px;
-    font-family: 'saira'!important;
+    margin-left: 90px;
+    margin-top: 0.2em;
+    font-family: 'Saira', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
