@@ -46,7 +46,7 @@ header .navegacion a{
     line-height: normal;
 }
 .navegacion a:hover {
-    font-size: 1em;
+    font-size: 1 em;
     font-weight: bold;
     color: #002198;
     transition: font-size 0.3s ease;
@@ -77,6 +77,7 @@ main{
     header{
         position:fixed;
         width:100%;
+        z-index: 9999;
     }
     header .encabezado{
         flex-direction: row;
