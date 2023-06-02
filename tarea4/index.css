@@ -46,7 +46,7 @@ header .navegacion a{
     line-height: normal;
 }
 .navegacion a:hover {
-    font-size: 1 em;
+    font-size: 1em;
     font-weight: bold;
     color: #002198;
     transition: font-size 0.3s ease;
