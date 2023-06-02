@@ -33,15 +33,24 @@ header .encabezado a{
 header .navegacion{
     padding: 5px 40px;
     background-color: #D9D9D9 ;
-    height: 30px;
+    height: 40px;
     text-shadow: 10x;
+    display: flex;
 }
 header .navegacion a{ 
     padding: 5px 30px;
     color: black;
     text-decoration: none;
+    margin-right: 10px;
+    display: inline-block;
+    line-height: normal;
 }
-
+.navegacion a:hover {
+    font-size: 1 em;
+    font-weight: bold;
+    color: #002198;
+    transition: font-size 0.3s ease;
+  }
 main{
 
     display: grid;
@@ -51,36 +60,18 @@ main{
     gap:10px;
     
 }
-.diana{   
+.diana,
+.maira,
+.danna,
+.sebas {
     display: flex;
     width: 247px;
     height: 288px;
     margin-left: 60px;
-    
-}
-.maira{   
-    display: flex;
-    width: 247px;
-    height: 288px;
-    margin-left: 60px;
-}
-.danna{   
-    display: flex;
-    width: 247px;
-    height: 288px;
-    margin-left: 60px;
-}
-.sebas{   
-    display: flex;
-    width: 247px;
-    height: 288px;
-    margin-left: 60px;
-    
 }
 #p1{
     margin:500px;
 }
-
 @media(min-width:900px){
 
     header{
@@ -120,65 +111,36 @@ main{
     height: 80px;
     width: 80px;   
 }
-.diana1{
+.diana1,
+.maira1,
+.danna1,
+.sebas1 {
     margin:20px;
-    font-family: 'Play';
-    font-style: normal;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: justify;
-    
-}
-.maira1{
-    margin:20px;
-    font-family: 'Play';
+    font-family:Arial, Helvetica, sans-serif;
     font-style: normal;
     font-size: 16px;
     line-height: 19px;
     text-align: justify;
 }
-.danna1{
-    margin:20px;
-    font-family: 'Play';
-    font-style: normal;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: justify;
-}
-.sebas1{
-    margin:20px;
-    font-family: 'Play';
-    font-style: normal;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: justify;
-}
-#d{
+#d,
+#m,
+#da,
+#s {
     border: 1px solid #D9D9D9;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
 }
-#m{
-    border: 1px solid #D9D9D9;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-}
-#da{
-    border: 1px solid #D9D9D9;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-}
-#s{
-    border: 1px solid #D9D9D9;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-}
-
-
 }
 
 @media(min-width:1200px) {
     #caracteristicas{
         background-position-x:calc(100vw - 800px);       
     }
+}
+.movimiento-imagen {
+    transition: transform 0.5s ease;
+}
+  
+.movimiento-imagen:hover {
+    transform: translateY(-10px);
 }
