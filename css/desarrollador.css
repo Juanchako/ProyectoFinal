@@ -16,7 +16,6 @@ header .titulo{
     font-size: 48px;
     line-height: 76px;
     color: #E9D73C;
-     
 }
 header .encabezado{ 
     display: flex;
@@ -51,7 +50,7 @@ header .navegacion a{
     font-weight: bold;
     color: #002198;
     transition: font-size 0.3s ease;
-  }
+}
 main{
 
     display: grid;
@@ -107,7 +106,7 @@ main{
         justify-content: center;
 }
     .img-encabezado{
-    background-image:url("media/Group\ 84.png");
+    background-image:url("/media/Logo.png");
     background-size: cover;
     background-position: center center;
     height: 80px;
@@ -142,7 +141,6 @@ main{
 .movimiento-imagen {
     transition: transform 0.5s ease;
 }
-  
 .movimiento-imagen:hover {
     transform: translateY(-10px);
 }
