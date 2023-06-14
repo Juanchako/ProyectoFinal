@@ -36,6 +36,23 @@ header .navegacion{
     text-shadow: 10x;
     display: flex;
 }
+.infoEnv{
+    display: flex;
+    padding: 5px 40px;
+    background: rgba(252, 252, 252, 0.3);
+    height: 25px;
+    text-shadow: 10x;
+}
+
+header .infoEnv p{
+    margin: auto;
+    font-family: 'play';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    color: black;
+    
+}
 header .navegacion a{ 
     padding: 5px 30px;
     color: black;
@@ -54,6 +71,7 @@ header .navegacion a{
     border: 1px solid #E9D73C;
     border-radius: 20px;
 }
+
 
 /* RESPONSIVE del encabezado*/
 @media(min-width:900px){
