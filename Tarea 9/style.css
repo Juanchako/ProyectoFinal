@@ -84,8 +84,6 @@ body {
     font-size: 12px;
 }
 
-/*------------ Custom Placeholder ------------*/
-
 ::placeholder {
     font-size: 16px;
 }
