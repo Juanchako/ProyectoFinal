@@ -105,8 +105,18 @@ body {
     text-align: justify;
 }
 
-.button-signup{
+.button-signup {
     padding: 10px;
+}
+
+.btn-primary {
+    transition: box-shadow 0.3s, transform 0.3s;
+    border: none;
+}
+
+.btn-primary:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
 }
 
 /*------------ For small screens------------*/
