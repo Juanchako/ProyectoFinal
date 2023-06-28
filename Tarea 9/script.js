@@ -1,4 +1,6 @@
 // Inicializar una variable que reciba datos del DOM
+
+
 const signupForm = document.querySelector('#signupForm');
 const checkbox = document.querySelector('#exampleCheck1');
 const submitButton = document.querySelector('.btn-primary');
@@ -6,7 +8,18 @@ const passwordField = document.querySelector('#password');
 const confirmPasswordField = document.querySelector('#confirm-password');
 const showPasswordButton = document.querySelector('#show-password');
 const showConfirmPasswordButton = document.querySelector('#show-confirm-password');
+const phoneInput = document.querySelector('#phone');
 
+
+phoneInput.addEventListener('input', function (e) {
+  const inputValue = e.target.value;
+
+  // Eliminar cualquier carácter no numérico
+  const numericValue = inputValue.replace(/\D/g, '');
+
+  // Actualizar el valor del campo de entrada con solo números
+  phoneInput.value = numericValue;
+});
 
 // Deshabilitar el botón de registro inicialmente
 submitButton.disabled = true;
@@ -40,12 +53,14 @@ showConfirmPasswordButton.addEventListener('click', () => {
 });
 
 showConfirmPasswordButton.addEventListener('click', () => {
-    showConfirmPasswordButton.classList.toggle('clicked');
-  });
+  showConfirmPasswordButton.classList.toggle('clicked');
+});
 
-  showPasswordButton.addEventListener('click', () => {
-    showPasswordButton.classList.toggle('clicked');
-  });
+showPasswordButton.addEventListener('click', () => {
+  showPasswordButton.classList.toggle('clicked');
+});
+
+
 // Inicializaremos un evento para que nos envíe los datos con el botón
 signupForm.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -73,21 +88,38 @@ signupForm.addEventListener('submit', (e) => {
 
   // Realizaremos una comprobación
   if (isUserRegistered) {
-    return alert('El usuario ya está registrado, intentalo con otro correo');
+    return Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'El usuario ya está registrado, intentalo con otro correo',
+      showConfirmButton: false,
+      timer: 1500
+    })
   }
 
   // Verificar si las contraseñas coinciden
   if (password !== confpass) {
-    return alert('Las contraseñas no coinciden');
+    return Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Las contraseñas no coinciden',
+      showConfirmButton: false,
+      timer: 1500
+    })
   }
 
   // Agregaremos los datos al objeto
   Users.push({ name: name, phone: phone, email: email, password: password });
   localStorage.setItem('users', JSON.stringify(Users));
 
-  // Reiniciar el formulario y deshabilitar el botón de registro
-  submitButton.disabled = true;
-
-  alert('Registro Exitoso');
-  window.location.href = 'registro.html'
+  Swal.fire({
+    icon: 'success',
+    title: '¡Usuario Registrado!',
+    showConfirmButton: false,
+    timer: 1000
+  })
+  setTimeout(function () {
+    window.location.href = '../Tarea 10/inicio.html';
+  }, 1100);
 });
+

@@ -111,11 +111,22 @@ body {
 .btn-primary {
     transition: box-shadow 0.3s, transform 0.3s;
     border: none;
+    background-color: rgba(0, 33, 151, 0.7699999809265137);
+    padding: 10px 20px;
+}
+
+.btn-primary:disabled {
+    background-color: rgba(0, 33, 151, 0.61); 
+}
+
+.btn-primary:click {
+    background-color: rgba(0, 33, 151, 0.61); 
 }
 
 .btn-primary:hover {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1.1);
+    background-color: rgba(0, 33, 151, 0.7699999809265137);
 }
 
 .back {

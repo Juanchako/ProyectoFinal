@@ -41,11 +41,22 @@ loginForm.addEventListener('submit', (e) => {
 
     //Si los datos no concuerdan y son (!) DIFERENTES, entonces que nos muestre un mensaje
     if (!validUser) {
-        return alert('Usuario y/o contraseña son incorrectos o no existen.')
+        return Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Email y/o contraseña son incorrectos o no existen.',
+            showConfirmButton: false,
+            timer: 1700
+          })
     }
 
     //Si los datos concuerdan, nos muestre un mensaje de bienvenida con el nombre del usuario registrado
-    alert(`Bienvenido ${validUser.name}`)
+    Swal.fire({
+        icon: 'success',
+        title: `Bienvenid@ ${validUser.name}`,
+        showConfirmButton: false,
+        timer: 1200
+      })
 
     //localstosrage.setItem para enviar o almacenar los datos
     //'login_sucess' que se logueo correctamente
@@ -54,5 +65,7 @@ loginForm.addEventListener('submit', (e) => {
     localStorage.setItem('login_success', JSON.stringify(validUser))
 
     //Si el logueo es exitoso, que nos redireccione al home
-    window.location.href = '#'
-})
+    setTimeout(function() {
+        window.location.href = 'inicio.html';
+      }, 1300);
+});
