@@ -38,13 +38,17 @@ body {
     background-color: rgba(35, 35, 216, 0.397);
 }
 
+.form-check {
+    margin-bottom: 1.8rem;
+}
+
 .check p {
     font-size: 12px;
     text-align: justify;
 }
 
 .button-sign {
-    padding: 10px;
+    padding-bottom: 10px;
 }
 
 .btn-primary {
@@ -63,6 +67,16 @@ body {
 
 .row {
     align-items: center;
+}
+
+.back {
+    color: black;
+    cursor: pointer;
+    height: 40px;
+}
+
+.back:hover {
+    color: rgb(95, 95, 231);
 }
 
 /*------------ Right box ------------*/
@@ -122,6 +136,7 @@ body {
     height: 320px;
     border-radius: 50%;
     padding: 10px;
+    margin-bottom: 10%;
 }
 
 @media only screen and (max-width: 768px) {

@@ -100,7 +100,7 @@ body {
 }
 
 .check p {
-    font-size: 12px;
+    font-size: 10px;
     text-align: justify;
 }
 
@@ -116,6 +116,16 @@ body {
 .btn-primary:hover {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1.1);
+}
+
+.back {
+    color: black;
+    cursor: pointer;
+    height: 40px;
+}
+
+.back:hover {
+    color: rgb(95, 95, 231);
 }
 
 /*------------ For small screens------------*/
