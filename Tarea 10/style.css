@@ -79,6 +79,11 @@ body {
     color: rgb(95, 95, 231);
 }
 
+.highlighted {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    background-color: rgba(35, 35, 216, 0.397);
+}
+
 /*------------ Right box ------------*/
 
 .box-area {
