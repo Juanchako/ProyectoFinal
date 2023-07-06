@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+header .titulo{
+    position: absolute;
+    margin-left: 90px;
+    margin-top: 0.2em;
+    font-family: 'Saira', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 76px;
+    color: #E9D73C;
+}
+header .encabezado{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #002198 ;
+    height: 100px;
+}    
+header .encabezado a{
+    padding: 5px 12px;
+    text-decoration: none;
+    color: beige;
+}
+
+header .navegacion{
+    padding: 5px 40px;
+    background-color: #D9D9D9 ;
+    height: 40px;
+    text-shadow: 10x;
+    display: flex;
+}
+header .navegacion a{ 
+    padding: 5px 30px;
+    color: black;
+    text-decoration: none;
+    margin-right: 10px;
+    display: inline-block;
+    line-height: normal;
+}
+.navegacion a:hover {
+    font-size: 1 em;
+    font-weight: bold;
+    color: #002198;
+    transition: font-size 0.3s ease;
+}
+main{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 500px;
+    gap:10px;
+    
+}
+.diana,
+.maira,
+.danna,
+.sebas {
+    display: flex;
+    width: 247px;
+    height: 288px;
+    margin-left: 60px;
+}
+#p1{
+    margin:500px;
+}
+@media(min-width:900px){
+
+    header{
+        position:fixed;
+        width:100%;
+        z-index: 9999;
+    }
+    header .encabezado{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header nav{
+        flex-direction: row;
+        padding-right: 20px;
+    }
+    #desProyecto{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #desProyecto h1{
+        text-align: center;
+        padding: 10px;
+    }
+    #desProyecto .texto{
+        margin-top: 120px;
+        width: 100%;
+        max-width: 1400px;
+        text-align:justify;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+}
+    .img-encabezado{
+    background-image:url("/media/Logo.png");
+    background-size: cover;
+    background-position: center center;
+    height: 80px;
+    width: 80px;   
+}
+.diana1,
+.maira1,
+.danna1,
+.sebas1 {
+    margin:20px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: justify;
+}
+#d,
+#m,
+#da,
+#s {
+    border: 1px solid #D9D9D9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+}
+
+@media(min-width:1200px) {
+    #caracteristicas{
+        background-position-x:calc(100vw - 800px);       
+    }
+}
+.movimiento-imagen {
+    transition: transform 0.5s ease;
+}
+.movimiento-imagen:hover {
+    transform: translateY(-10px);
+}
